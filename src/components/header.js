@@ -9,11 +9,10 @@ const Header = () => {
 
   const [navList, setnavList] = useState(["新闻", "研究", "理念", "关于"])
   const [infoList, setinfoList] = useState([
-    "经济",
+    "技术",
+    "设计",
     "社会",
-    "变革",
-    "新闻",
-    "活动",
+    "经济",
   ])
   const { colorMode, toggleColorMode } = useColorMode()
 
@@ -62,7 +61,7 @@ const Header = () => {
                   style={{ display: "inline", cursor: "pointer" }}
                 >
                   <Text display="inline-block" ml={8}  lineHeight="44px" color="#fff">
-                    <Link style={{fontSize: '14px', paddingBottom:'0.5vh', borderBottom:(windowGlobal == "/"+page[index]) ? "1px solid white" :"none"}} to={page[index]} >{val}</Link>
+                    <Link style={{fontSize: '14px', paddingBottom:'0.5vh', borderBottom:(windowGlobal == "/"+page[index]) ? "1px solid white" :"none"}} to={ "/"+page[index]} >{val}</Link>
                   </Text>{" "}
                 </li>
               ))}

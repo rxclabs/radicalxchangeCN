@@ -42,7 +42,17 @@ h2{
 }
 
 p{
-    font-family: "NotoSansSC-Regular" !important
+    font-family: "NotoSansSC-Regular" 
+}
+
+
+body{
+    font-family: "NotoSansSC-Regular"
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -62,15 +72,3 @@ p{
     color:#000;
 }
 
-body{
-    font-family: NotoSansSC-Regular;
-}
-
-img{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-html li{
-    color: #555 !important;
-}
