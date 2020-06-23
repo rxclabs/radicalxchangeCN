@@ -42,7 +42,8 @@ h2{
 }
 
 p{
-    font-family: "NotoSansSC-Regular" 
+    font-family: "NotoSansSC-Regular";
+    line-height: 2rem;
 }
 
 

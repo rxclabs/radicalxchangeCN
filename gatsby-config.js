@@ -18,22 +18,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `imagesicon`,
         path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
-          options: {
-              path: `${__dirname}/static/img`,
-              name: 'images',
-          },
-  },
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "images",
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          "gatsby-remark-relative-images",
           {
             resolve: `gatsby-remark-images`,
             options: {
