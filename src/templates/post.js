@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import {  Box } from "@chakra-ui/core"
+import { Box, Heading, Stack, Avatar,Text } from "@chakra-ui/core"
 import Layout from "../components/layout"
-import postStyle from './post.module.css';
+import Content from "../components/content"
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -20,23 +20,34 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         pt={["20px", "20px", "50px", "10vh"]}
         mb="40vh"
       >
-        <article>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        </article>
+        <Heading
+          lineHeight="7vh"
+          fontWeight="700"
+          fontFamily="NotoSansSC-Medium"
+        >
+          {post.frontmatter.title}
+        </Heading>
+
+        <Stack isInline mt="1.5rem">
+          <Avatar w="25px" h="25px" name={post.frontmatter.author} src={post.frontmatter.authorimg} />
+          <Text lineHeight="25px" fontSize="0.8rem">{post.frontmatter.author}</Text>
+        </Stack>
+
+        <Content input={post.html} />
 
         <nav>
           <ul>
-            <li>
+            <li style={{listStyleType:"none"}}>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                          上一篇： ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
-            <li>
+            <li style={{listStyleType:"none"}}>
               {next && (
                 <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                  下一篇： {next.frontmatter.title} →
                 </Link>
               )}
             </li>

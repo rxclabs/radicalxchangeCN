@@ -6,7 +6,7 @@ const ConceptBody = ({ title, body, list }) => {
   const data = useStaticQuery(graphql`
     {
       imageSharp(id: { eq: "2cb3bf89-545a-5b6d-bd70-fbb631ccdb9b" }) {
-        fixed(width: 45, height: 45) {
+        fixed(width: 35, height: 35) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -30,7 +30,7 @@ const ConceptBody = ({ title, body, list }) => {
             fontSize="1.4rem"
             borderTop="1px solid #000"
             borderBottom="1px solid #000"
-            mb="1.2rem"
+            mb="1rem"
           >
             <span>&nbsp; </span>
             {title}
