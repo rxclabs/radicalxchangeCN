@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import { Box, Heading, Stack, Avatar,Text } from "@chakra-ui/core"
+import { Box, Heading, Stack, Avatar, Text } from "@chakra-ui/core"
 import Layout from "../components/layout"
 import Content from "../components/content"
 
@@ -28,23 +28,32 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           {post.frontmatter.title}
         </Heading>
 
+        <Text>{post.frontmatter.description}</Text>
+
         <Stack isInline mt="1.5rem">
-          <Avatar w="25px" h="25px" name={post.frontmatter.author} src={post.frontmatter.authorimg} />
-          <Text lineHeight="25px" fontSize="0.8rem">{post.frontmatter.author}</Text>
+          <Avatar
+            w="25px"
+            h="25px"
+            name={post.frontmatter.author}
+            src={post.frontmatter.authorimg.childImageSharp.fixed.src}
+          />
+          <Text lineHeight="25px" fontSize="0.8rem">
+            {post.frontmatter.author}
+          </Text>
         </Stack>
 
         <Content input={post.html} />
 
         <nav>
           <ul>
-            <li style={{listStyleType:"none"}}>
+            <li style={{ listStyleType: "none" }}>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                          上一篇： ← {previous.frontmatter.title}
+                  上一篇： ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
-            <li style={{listStyleType:"none"}}>
+            <li style={{ listStyleType: "none" }}>
               {next && (
                 <Link to={next.fields.slug} rel="next">
                   下一篇： {next.frontmatter.title} →
@@ -65,10 +74,22 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         author
-        authorimg
+        authorimg {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
         date(formatString: "YYYY-MM-DD")
         description
-        img
+        img {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
         featuredpost
         tags
         title
