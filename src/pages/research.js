@@ -8,7 +8,7 @@ import { Heading, Box, Text, Divider } from "@chakra-ui/core"
 const Research = ({ data }) => {
   return (
     <Layout>
-      < Box mb="35vh">
+      < Box mb="30vh">
       <SEO title="研究" />
       <Box
         w="100%"

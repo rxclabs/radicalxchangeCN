@@ -21,7 +21,7 @@ const IndexPage = () => {
             }
             img {
               childImageSharp {
-                fluid(maxWidth: 1000, maxHeight: 450) {
+                fluid(maxWidth: 1000, maxHeight: 580) {
                   ...GatsbyImageSharpFluid
                 }
               }

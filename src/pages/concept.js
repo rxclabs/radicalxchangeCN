@@ -111,7 +111,7 @@ const Concept = () => {
         px="30px"
         pt={["20px", "20px", "50px", "40px"]}
         mt="2vw"
-        mb="20vh"
+        mb="30vh"
       >
         <Heading fontSize="2.5rem" fontFamily="NotoSansSC-Regular">
           理念

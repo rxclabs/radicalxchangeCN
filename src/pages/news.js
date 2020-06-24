@@ -9,7 +9,7 @@ const News = ({ data }) => {
   return (
     <Layout>
       <SEO title="新闻" />
-      < Box mb="35vh">
+      < Box mb="30vh">
       <Box
         w="100%"
         maxW={1080}

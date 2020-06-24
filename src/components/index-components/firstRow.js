@@ -7,11 +7,15 @@ import {
   Text,
   Avatar,
   Stack,
+  useColorMode
 } from "@chakra-ui/core"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const FirstRow = ({ data }) => {
+
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <Flex
       flexWrap="wrap"
@@ -19,18 +23,18 @@ const FirstRow = ({ data }) => {
       maxW={1080}
       mx="auto"
       px={[0, 0, 0, "30px"]}
-      pt={["20px", "20px", "50px", "60px"]}
-      mb="5vw"
+      pt={["2vw", "2vw", "3vw", "4.5vw"]}
+      mb="15vw"
     >
       {/* 第一大栏目 */}
       <PseudoBox
         display="flex"
         flexDir={["column", "column", "column", "row"]}
-        paddingBottom="3vw"
+        paddingBottom="4vw"
         w={["100%", "45%", "45%", "97.5%"]}
         borderBottom="1px solid #eee"
         mx="auto"
-        mb="3vw"
+        mb="4vw"
         _hover={{ color: " #6873e5" }}
       >
          
@@ -46,7 +50,6 @@ const FirstRow = ({ data }) => {
             transition: "all 1000ms ease 0s",
           }}
         >
-          {console.log(data[0])}
           <Img fluid={data[0].frontmatter.img.childImageSharp.fluid} />
         </PseudoBox>
         <Box
@@ -65,8 +68,9 @@ const FirstRow = ({ data }) => {
               fontFamily="NotoSansSC-Medium "
               mt={["1.2rem", "1.2rem", "1.2rem", 0]}
             >
-              {/* {a.map(v => v.frontmatter.title)} */}
-              {data[0].frontmatter.title}
+              <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+                {data[0].frontmatter.title}
+              </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
@@ -80,19 +84,27 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar w="32px" h="32px" name="author"    src={data[0].frontmatter.authorimg.publicURL} />
+              <Avatar
+                w="32px"
+                h="32px"
+                name="author"
+                src={data[0].frontmatter.authorimg.publicURL}
+              />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
-                  {/* {a.map(v => v.frontmatter.author)} */}
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[0].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
-                  {/* {a.map(v => v.frontmatter.date)} */}
                   {data[0].frontmatter.date}
                 </Text>
               </Flex>
@@ -106,8 +118,8 @@ const FirstRow = ({ data }) => {
         w={["100%", "45%", "45%", "31%"]}
         borderBottom="1px solid #eee"
         mx="auto"
-        mb="3vw"
-        paddingBottom="3vw"
+        mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[1].fields.slug}>
@@ -137,8 +149,9 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-              {/* {a.map(v => v.frontmatter.title)} */}
-              {data[1].frontmatter.title}
+          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+                {data[1].frontmatter.title}
+              </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
@@ -158,15 +171,20 @@ const FirstRow = ({ data }) => {
                 name="author"
                 src={data[1].frontmatter.authorimg.publicURL}
               />
-                 <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+              <Flex flexDir="column" ml="0.5vw">
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[1].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
                   {data[1].frontmatter.date}
                 </Text>
@@ -182,8 +200,8 @@ const FirstRow = ({ data }) => {
         w={["100%", "45%", "45%", "31%"]}
         borderBottom="1px solid #eee"
         mx="auto"
-        mb="3vw"
-        paddingBottom="3vw"
+        mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[2].fields.slug}>
@@ -213,7 +231,9 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-              {data[2].frontmatter.title}
+             <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+                {data[2].frontmatter.title}
+              </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
@@ -234,14 +254,19 @@ const FirstRow = ({ data }) => {
                 src={data[2].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[2].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
                   {data[2].frontmatter.date}
                 </Text>
@@ -256,8 +281,8 @@ const FirstRow = ({ data }) => {
         w={["100%", "45%", "45%", "31%"]}
         borderBottom="1px solid #eee"
         mx="auto"
-        mb="3vw"
-        paddingBottom="3vw"
+        mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[3].fields.slug}>
@@ -287,7 +312,9 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-              {data[3].frontmatter.title}
+            <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+                {data[3].frontmatter.title}
+              </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
@@ -308,14 +335,19 @@ const FirstRow = ({ data }) => {
                 src={data[3].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[3].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
                   {data[3].frontmatter.date}
                 </Text>
@@ -330,8 +362,8 @@ const FirstRow = ({ data }) => {
         w={["100%", "44.6%", "44.6%", "47.6%"]}
         mx="auto"
         borderBottom="1px solid #eee"
-        mb="3vw"
-        paddingBottom="3vw"
+        mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[4].fields.slug}>
@@ -354,13 +386,12 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-            <Heading mb="12px" fontSize="2xl" mt={"1.2rem"}>
-              {/* {a.map(v => v.frontmatter.title)} */}
+          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
               {data[4].frontmatter.title}
             </Heading>
             <Text
               mb="1.5em"
-              fontSize="1.1rem"
+              fontSize={["1.1rem", "1.1rem", "1.1rem", "1rem"]}
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -377,14 +408,19 @@ const FirstRow = ({ data }) => {
                 src={data[4].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[4].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
                   {data[4].frontmatter.date}
                 </Text>
@@ -400,8 +436,8 @@ const FirstRow = ({ data }) => {
         w={["100%", "44.6%", "44.6%", "47.6%"]}
         mx="auto"
         borderBottom="1px solid #eee"
-        mb="3vw"
-        paddingBottom="3vw"
+        mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[5].fields.slug}>
@@ -424,12 +460,12 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-            <Heading mb="12px" fontSize="2xl" mt={"1.2rem"}>
+          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
               {data[5].frontmatter.title}
             </Heading>
             <Text
               mb="1.5em"
-              fontSize="1.1rem"
+              fontSize={["1.1rem", "1.1rem", "1.1rem", "1rem"]}
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -439,16 +475,26 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Avatar w="32px" h="32px" name="author"   src={data[5].frontmatter.authorimg.publicURL}/>
+              <Avatar
+                w="32px"
+                h="32px"
+                name="author"
+                src={data[5].frontmatter.authorimg.publicURL}
+              />
               <Flex flexDir="column">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text
+                  fontSize="0.5rem"
+                  color="#6873e5"
+                  fontWeight="700"
+                  lineHeight="1rem"
+                >
                   {data[5].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1"
+                  fontSize="0.5rem"
+                  lineHeight="1.3rem"
                 >
                   {data[5].frontmatter.date}
                 </Text>
