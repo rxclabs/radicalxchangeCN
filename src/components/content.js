@@ -27,8 +27,14 @@ const Wrapper = styled.div`
 
   ul {
     color: #555;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
   }
+
+  ol {
+    color: #555;
+    margin-left: 1.5vw;
+  }
+
   li {
     line-height: 4.25vh;
     font-family: NotoSansSC-Regular;
