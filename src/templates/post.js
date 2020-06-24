@@ -1,7 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import { Box, Heading, Stack, Avatar, Text, Divider } from "@chakra-ui/core"
+import {
+  Box,
+  Heading,
+  Stack,
+  Avatar,
+  Text,
+  Divider,
+  Flex,
+} from "@chakra-ui/core"
 import Layout from "../components/layout"
 import Content from "../components/content"
 
@@ -52,24 +60,22 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
         <Content input={post.html} />
 
-        <nav>
-          <ul>
-            <li style={{ listStyleType: "none" }}>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  上一篇： ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li style={{ listStyleType: "none" }}>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  下一篇： {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+        <Flex justifyContent="space-between" mt="5rem">
+          <Box style={{ listStyleType: "none" }} border="1px solid black" p={4} borderRadius="1rem">
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </Box>
+          <Box style={{ listStyleType: "none" }} border="1px solid black" p={4} borderRadius="1rem">
+            {next && (
+              <Link to={next.fields.slug} rel="next" >
+               {next.frontmatter.title} →
+              </Link>
+            )}
+          </Box>
+        </Flex>
       </Box>
     </Layout>
   )
