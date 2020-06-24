@@ -79,7 +79,7 @@ const EachList = ({ value }) => {
                 />
 
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#6873e5"
                   fontWeight="700"
                   lineHeight="1rem"
@@ -87,7 +87,7 @@ const EachList = ({ value }) => {
                   {value.frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1rem"

@@ -82,12 +82,12 @@ const FirstRow = ({ data }) => {
               {" "}
               <Avatar w="32px" h="32px" name="author"    src={data[0].frontmatter.authorimg.publicURL} />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {/* {a.map(v => v.frontmatter.author)} */}
                   {data[0].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
@@ -159,12 +159,12 @@ const FirstRow = ({ data }) => {
                 src={data[1].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700">
                   {/* {a.map(v => v.frontmatter.author)} */}
                   {data[1].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
@@ -236,11 +236,11 @@ const FirstRow = ({ data }) => {
                 src={data[2].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[2].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
@@ -310,11 +310,11 @@ const FirstRow = ({ data }) => {
                 src={data[3].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[3].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
@@ -379,11 +379,11 @@ const FirstRow = ({ data }) => {
                 src={data[4].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[4].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
@@ -443,11 +443,11 @@ const FirstRow = ({ data }) => {
               {" "}
               <Avatar w="32px" h="32px" name="author"   src={data[5].frontmatter.authorimg.publicURL}/>
               <Flex flexDir="column">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[5].frontmatter.author}
                 </Text>
                 <Text
-                  fontSize="0.5px"
+                  fontSize="1rem"
                   color="#aaa"
                   fontWeight="700"
                   lineHeight="1"
