@@ -1,16 +1,19 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Heading, Box, Text, Divider, Link, Flex } from "@chakra-ui/core"
+import { Heading, Box, Text,  Link, Flex } from "@chakra-ui/core"
 import Img from "gatsby-image"
 const ConceptBody = ({ title, body, list }) => {
   const data = useStaticQuery(graphql`
     {
-      imageSharp(id: { eq: "2cb3bf89-545a-5b6d-bd70-fbb631ccdb9b" }) {
-        fixed(width: 35, height: 35) {
-          ...GatsbyImageSharpFixed
+      allImageSharp(filter: {resolutions: {originalName: {eq: "gatsby-icon.png"}}}) {
+        nodes {
+          fixed(width: 35, height: 35) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
+
   `)
   return (
     <>
@@ -22,7 +25,7 @@ const ConceptBody = ({ title, body, list }) => {
         borderRadius="1rem"
         boxShadow="0 0 0.6rem #888"
       >
-        <Img fixed={data.imageSharp.fixed} />
+        <Img fixed={data.allImageSharp.nodes[0].fixed} />
         <Flex justifyContent="center">
           <Heading
             py={2}
@@ -64,3 +67,12 @@ const ConceptBody = ({ title, body, list }) => {
 }
 
 export default ConceptBody
+
+
+// {
+//   imageSharp(id: { eq: "2cb3bf89-545a-5b6d-bd70-fbb631ccdb9b" }) {
+//     fixed(width: 35, height: 35) {
+//       ...GatsbyImageSharpFixed
+//     }
+//   }
+// }
