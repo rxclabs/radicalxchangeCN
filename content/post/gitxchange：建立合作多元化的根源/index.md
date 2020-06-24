@@ -2,8 +2,8 @@
 title: GitxChange：建立合作多元化的根源
 date: 2020-06-24T02:59:27.380Z
 featuredpost: true
-img: gitxchange-image.png
-authorimg: gitxchange-image.png
+img: 4.jpg
+authorimg: 4.jpg
 description: “要入侵一个系统，需要比创建或运行该系统的人更了解它的规则，并利用这些人打算该系统工作的方式与它实际工作的方式之间的所有脆弱距离，或者工作。在利用这些无意的用途时，黑客并没有像破坏规则那样违反规则。”  爱德华·斯诺登，2019年，“永久记录”
 tags: news
 author: Leon Erichsen
