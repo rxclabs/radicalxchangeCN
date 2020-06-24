@@ -1,21 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import EachList from "../components/eachList"
 // ui
-import {
-  Flex,
-  Heading,
-  Box,
-  Text,
-  Stack,
-  PseudoBox,
-  Divider,
-  Avatar,
-} from "@chakra-ui/core"
-// 图片引入】
-import Img from "gatsby-image"
+import { Heading, Box, Text, Divider } from "@chakra-ui/core"
 
-const News = () => {
+const News = ({ data }) => {
   return (
     <Layout>
       <SEO title="新闻" />
@@ -28,7 +18,7 @@ const News = () => {
         mt="2vw"
       >
         <Heading fontSize="2.5rem" fontFamily="NotoSansSC-Regular">
-          研究
+          新闻
         </Heading>
         <Text
           color="#969696"
@@ -41,15 +31,42 @@ const News = () => {
         </Text>
       </Box>
       <Divider w="100%" maxW={1018} borderColor="#ddd" mt="1vw" mx="auto" />
-
-      <Box>
-        <Heading></Heading>
-        <Text>
-
-        </Text>
-      </Box>
+      {data.allMarkdownRemark.nodes.map((value, index) => (
+        <EachList value={value} key={index} />
+      ))}
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allMarkdownRemark(
+      filter: { frontmatter: { tags: { eq: "news" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          author
+          date(difference: "YYYY-MM-DD")
+          description
+          authorimg {
+            publicURL
+          }
+          img {
+            childImageSharp {
+              fixed(width: 250, height: 250) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`
 
 export default News
