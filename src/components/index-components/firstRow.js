@@ -158,9 +158,8 @@ const FirstRow = ({ data }) => {
                 name="author"
                 src={data[1].frontmatter.authorimg.publicURL}
               />
-              <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="1rem" color="#6873e5" fontWeight="700">
-                  {/* {a.map(v => v.frontmatter.author)} */}
+                 <Flex flexDir="column" ml="0.5vw">
+                <Text fontSize="1rem" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[1].frontmatter.author}
                 </Text>
                 <Text
@@ -169,7 +168,6 @@ const FirstRow = ({ data }) => {
                   fontWeight="700"
                   lineHeight="1"
                 >
-                  {/* {a.map(v => v.frontmatter.date)} */}
                   {data[1].frontmatter.date}
                 </Text>
               </Flex>
