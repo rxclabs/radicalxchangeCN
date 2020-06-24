@@ -61,14 +61,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Content input={post.html} />
 
         <Flex justifyContent="space-between" mt="5rem">
-          <Box style={{ listStyleType: "none" }} border="1px solid black" p={4} borderRadius="1rem">
+          <Box style={{ listStyleType: "none" }} >
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </Box>
-          <Box style={{ listStyleType: "none" }} border="1px solid black" p={4} borderRadius="1rem">
+          <Box style={{ listStyleType: "none" }} >
             {next && (
               <Link to={next.fields.slug} rel="next" >
                {next.frontmatter.title} →

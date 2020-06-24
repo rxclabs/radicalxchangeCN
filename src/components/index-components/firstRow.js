@@ -80,9 +80,9 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar w="32px" h="32px" name="author" />
+              <Avatar w="32px" h="32px" name="author"    src={data[0].frontmatter.authorimg.publicURL} />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
+                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {/* {a.map(v => v.frontmatter.author)} */}
                   {data[0].frontmatter.author}
                 </Text>
@@ -236,7 +236,7 @@ const FirstRow = ({ data }) => {
                 src={data[2].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
+                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[2].frontmatter.author}
                 </Text>
                 <Text
@@ -310,7 +310,7 @@ const FirstRow = ({ data }) => {
                 src={data[3].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column" ml="0.5vw">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
+                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[3].frontmatter.author}
                 </Text>
                 <Text
@@ -379,7 +379,7 @@ const FirstRow = ({ data }) => {
                 src={data[4].frontmatter.authorimg.publicURL}
               />
               <Flex flexDir="column">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
+                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
                   {data[4].frontmatter.author}
                 </Text>
                 <Text
@@ -427,7 +427,7 @@ const FirstRow = ({ data }) => {
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
             <Heading mb="12px" fontSize="2xl" mt={"1.2rem"}>
-              {data[4].frontmatter.title}
+              {data[5].frontmatter.title}
             </Heading>
             <Text
               mb="1.5em"
@@ -437,14 +437,14 @@ const FirstRow = ({ data }) => {
               letterSpacing="0.025vw"
               fontFamily="NotoSansSC-Medium !important"
             >
-              {data[4].frontmatter.description.substring(0, 70)}...
+              {data[5].frontmatter.description.substring(0, 70)}...
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Avatar w="32px" h="32px" name="author" />
+              <Avatar w="32px" h="32px" name="author"   src={data[5].frontmatter.authorimg.publicURL}/>
               <Flex flexDir="column">
-                <Text fontSize="0.5px" color="#6873e5" fontWeight="700">
-                  {data[4].frontmatter.author}
+                <Text fontSize="0.5px" color="#6873e5" fontWeight="700"  lineHeight="1rem">
+                  {data[5].frontmatter.author}
                 </Text>
                 <Text
                   fontSize="0.5px"
@@ -452,7 +452,7 @@ const FirstRow = ({ data }) => {
                   fontWeight="700"
                   lineHeight="1"
                 >
-                  {data[4].frontmatter.date}
+                  {data[5].frontmatter.date}
                 </Text>
               </Flex>
             </Stack>

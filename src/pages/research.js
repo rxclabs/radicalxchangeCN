@@ -50,7 +50,7 @@ export const query = graphql`
         frontmatter {
           title
           author
-          date(difference: "YYYY-MM-DD")
+          date(formatString: "YYYY-MM-DD")
           description
           authorimg {
             publicURL
