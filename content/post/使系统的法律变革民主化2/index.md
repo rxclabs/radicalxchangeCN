@@ -6,7 +6,7 @@ img: gitxchange-image.png
 authorimg: gitxchange-image.png
 description: 通过诉讼比通过更传统的途径更有效地推进一些社会事业，例如非营利服务提供，社会企业家精神或政治选举。对于涉及公民权利的原因，例如大规模监禁，投票权和移民，尤其如此  。
 tags: news
-author: Matt Prewitt和Paul Healy
+author: Matt Prewitt & Paul Healy
 ---
 ## 影响诉讼在传统的公共部门和私营部门解决方案可能效果不佳的地区引发了大规模的社会变革。
 
