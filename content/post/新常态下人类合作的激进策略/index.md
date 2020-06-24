@@ -2,8 +2,8 @@
 title: 新常态下人类合作的激进策略
 date: 2020-06-24T02:50:43.825Z
 featuredpost: true
-img: 在丰富与稀缺之间07.png
-authorimg: 在丰富与稀缺之间07.png
+img: 3.jpg
+authorimg: 3.jpg
 description: 目前席卷全球的COVID-19大流行表明，在全球化背景下，政府和私人行为体应对威胁的机构能力存在重大缺陷。人畜共患病病毒传播的因果机制使人类将来极易受到这些暴发的影响。从扩大的和相互联系的动物供应链推动的肉类消费的大量增加，到每天的全球旅行和高城市密度，我们带来了一种新的常态，在这种常态下，从动物到人类的病毒性传播影响了全人类。
 tags: news
 author: Leon Erichsen and Ryan Khurana
