@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
-import { Box, Heading, Stack, Avatar, Text } from "@chakra-ui/core"
+import { Box, Heading, Stack, Avatar, Text, Divider } from "@chakra-ui/core"
 import Layout from "../components/layout"
 import Content from "../components/content"
 
@@ -28,8 +28,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           {post.frontmatter.title}
         </Heading>
 
-        <Text>{post.frontmatter.description}</Text>
-
+        <Text
+          fontSize="1rem"
+          color="#a8a9a6"
+          mt="4vh"
+          mb="4vh"
+          lineHeight="3.25vh"
+        >
+          {post.frontmatter.description}
+        </Text>
+        <Divider />
         <Stack isInline mt="1.5rem">
           <Avatar
             w="25px"
