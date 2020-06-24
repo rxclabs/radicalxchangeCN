@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           {post.frontmatter.description}
         </Text>
         <Divider />
-        <Stack isInline mt="1.5rem">
+        <Stack isInline mt="1.5rem" mb="2rem">
           <Avatar
             w="25px"
             h="25px"

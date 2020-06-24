@@ -13,7 +13,6 @@ const ConceptBody = ({ title, body, list }) => {
         }
       }
     }
-
   `)
   return (
     <>

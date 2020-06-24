@@ -9,6 +9,7 @@ const News = ({ data }) => {
   return (
     <Layout>
       <SEO title="新闻" />
+      < Box mb="35vh">
       <Box
         w="100%"
         maxW={1080}
@@ -34,6 +35,7 @@ const News = ({ data }) => {
       {data.allMarkdownRemark.nodes.map((value, index) => (
         <EachList value={value} key={index} />
       ))}
+      </Box>
     </Layout>
   )
 }
@@ -48,15 +50,15 @@ export const query = graphql`
         frontmatter {
           title
           author
-          date(difference: "YYYY-MM-DD")
+          date(formatString: "YYYY-MM-DD")
           description
           authorimg {
             publicURL
           }
           img {
             childImageSharp {
-              fixed(width: 250, height: 250) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 1000, maxHeight: 450) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

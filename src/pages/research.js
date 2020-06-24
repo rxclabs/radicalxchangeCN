@@ -8,6 +8,7 @@ import { Heading, Box, Text, Divider } from "@chakra-ui/core"
 const Research = ({ data }) => {
   return (
     <Layout>
+      < Box mb="35vh">
       <SEO title="研究" />
       <Box
         w="100%"
@@ -34,6 +35,7 @@ const Research = ({ data }) => {
       {data.allMarkdownRemark.nodes.map((value, index) => (
         <EachList value={value} key={index} />
       ))}
+      </Box>
     </Layout>
   )
 }
@@ -55,10 +57,9 @@ export const query = graphql`
           }
           img {
             childImageSharp {
-              fixed(width: 250, height: 250) {
-                ...GatsbyImageSharpFixed
-              }
-            }
+              fluid(maxWidth: 1000, maxHeight: 450) {
+                ...GatsbyImageSharpFluid
+              }}
           }
         }
         fields {
