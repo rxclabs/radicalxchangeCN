@@ -2,8 +2,8 @@
 title: Gitcoin用二次金融对抗COVID-19
 date: 2020-06-24T03:05:43.117Z
 featuredpost: true
-img: potatocraft.png
-authorimg: potatocraft.png
+img: 2.jpg
+authorimg: 2.jpg
 description: 3月11日，世界卫生组织将COVID-19列为大流行病。传播病毒的全部社会和经济影响尚无法预测，但显然这是一次前所未有的危机，需要社会和生物医学思想的彻底，公开交流。
 tags: news
 author: Leon Erichsen
