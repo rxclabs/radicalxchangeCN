@@ -149,13 +149,13 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
                 {data[1].frontmatter.title}
               </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
-              fontSize={["1.1rem", "1.1rem", "1.1rem", "1rem"]}
+              fontSize="0.9rem"
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -231,13 +231,13 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-             <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+             <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
                 {data[2].frontmatter.title}
               </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
-              fontSize={["1.1rem", "1.1rem", "1.1rem", "1rem"]}
+              fontSize="0.9rem"
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -312,13 +312,13 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-            <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+            <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
                 {data[3].frontmatter.title}
               </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
-              fontSize={["1.1rem", "1.1rem", "1.1rem", "1rem"]}
+              fontSize="0.9rem"
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -386,7 +386,7 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
               {data[4].frontmatter.title}
             </Heading>
             <Text
@@ -460,7 +460,7 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
               {data[5].frontmatter.title}
             </Heading>
             <Text
