@@ -10,9 +10,9 @@ const Header = () => {
   const [navList, setnavList] = useState(["新闻", "研究", "理念", "关于"])
   const [infoList, setinfoList] = useState([
     "技术",
+    "经济",
     "设计",
     "社会",
-    "经济",
   ])
   const { colorMode, toggleColorMode } = useColorMode()
 
@@ -96,7 +96,7 @@ const Header = () => {
               marginTop="10vh"
               marginBottom="1vh"
             >
-              <Heading fontSize={60} textAlign="center" fontFamily="Pirou">
+              <Heading fontSize={60} textAlign="center" fontFamily="Pirou !important" >
                 RXC
               </Heading>
               <ul style={{ listStyle: "none", textAlign: "center" }}>
@@ -118,7 +118,7 @@ const Header = () => {
                 color="rgba(238,239,254,0.1)"
                 fontSize={["1.5rem","2rem","2.2rem","3.2rem"]}
                 textAlign="right"
-                fontFamily="LeagueSpartan"
+                fontFamily="LeagueSpartan  !important"
               >
                 RadicalxChange
               </Heading>

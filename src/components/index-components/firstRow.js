@@ -34,7 +34,7 @@ const FirstRow = ({ data }) => {
         mx="auto"
         mb="4vw"
         paddingBottom="4vw"
-        _hover={{ color: " #6873e5" }}
+        _hover={{ color: " #6873e5 " }}
       >
          
         <PseudoBox
@@ -59,7 +59,7 @@ const FirstRow = ({ data }) => {
         >
           <Link to={data[0].fields.slug}>
             <PseudoBox
-              _hover={{ color: " #6873e5" }}
+            
               mb="12px"
               fontWeight="900"
               fontSize="2rem"
@@ -67,9 +67,9 @@ const FirstRow = ({ data }) => {
               fontFamily="NotoSansSC-Medium "
               mt={["1.2rem", "1.2rem", "1.2rem", 0]}
             >
-              <Heading mb="12px" fontSize={["1.1rem","1.1rem","1.1rem","2xl"]} mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+              <PseudoBox as="h2" mb="12px"   _hover={{ color: " #6873e5" }} fontSize={["1.1rem","1.1rem","1.1rem","2xl"]} mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
                 {data[0].frontmatter.title}
-              </Heading>
+              </PseudoBox>
             </PseudoBox>
             <Text
               mb="1.5em"

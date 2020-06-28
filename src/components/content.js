@@ -56,7 +56,7 @@ const Wrapper_dark = styled.div`
     line-height: 1.25;
     font-weight: 700;
     font-family: NotoSansSC-Medium;
-    color: #000;
+    color: #fff;
     margin-top: 5vh;
   }
   blockquote > p {
