@@ -19,7 +19,7 @@ const Footer = () => {
         color="#555"
         fontWeight="bold"
         fontSize="16px"
-        fontFamily="Muli-ExtraBold"
+        fontFamily="NotoSansSC-Bold"
         letterSpacing="5px"
       >
         基进变革
