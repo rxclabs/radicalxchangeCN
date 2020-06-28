@@ -1,68 +1,44 @@
 @font-face{
     font-family: 'Pirou';
+    font-display: swap;
     src : url('../font/Pirou-Regular.otf');
 }
 
 
 @font-face{
     font-family: 'LeagueSpartan';
+    font-display: swap;
     src : url('../font/LeagueSpartan-Bold.otf');
 }
 
 
 
-
-/* @font-face{
-    font-family: 'NotoSansSC-Regular';
-    src : url('../font/Noto_Sans_SC/NotoSansSC-Regular.otf');
-} */
-
-
-/* @font-face{
-    font-family: 'NotoSansSC-Medium';
-    src : url('../font/Noto_Sans_SC/NotoSansSC-Medium.otf');
-} */
-
-/* @font-face{
-    font-family: 'NotoSansSC-Bold';
-    src : url('../font/Noto_Sans_SC/NotoSansSC-Bold.otf');
-} */
-
-
-@font-face {
+@font-face{
     font-family: 'NotoSansSC-Regular';
     font-display: swap;
-    src: url('//at.alicdn.com/t/webfont_31lg4ij0z15.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/webfont_31lg4ij0z15.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/webfont_31lg4ij0z15.woff2') format('woff2'),
-    url('//at.alicdn.com/t/webfont_31lg4ij0z15.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/webfont_31lg4ij0z15.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/webfont_31lg4ij0z15.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
-  }
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Regular.eot');
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Regular.woff2') format('woff2'), 
+    url('../font/Noto_Sans_SC/NotoSansSC-Bold.ttf') format('truetype'), 
+} 
 
 
-  @font-face {
+@font-face{
     font-family: 'NotoSansSC-Medium';
     font-display: swap;
-    src: url('//at.alicdn.com/t/webfont_aaodk8pzsce.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/webfont_aaodk8pzsce.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/webfont_aaodk8pzsce.woff2') format('woff2'),
-    url('//at.alicdn.com/t/webfont_aaodk8pzsce.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/webfont_aaodk8pzsce.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/webfont_aaodk8pzsce.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
-  }
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Medium.eot');
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Medium.woff2') format('woff2'), 
+    url('../font/Noto_Sans_SC/NotoSansSC-Bold.ttf') format('truetype'), 
+}
 
-
-  @font-face {
+@font-face{
     font-family: 'NotoSansSC-Bold';
     font-display: swap;
-    src: url('//at.alicdn.com/t/webfont_5reh3lcdo7h.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/webfont_5reh3lcdo7h.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/webfont_5reh3lcdo7h.woff2') format('woff2'),
-    url('//at.alicdn.com/t/webfont_5reh3lcdo7h.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/webfont_5reh3lcdo7h.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/webfont_5reh3lcdo7h.svg#NotoSansHans-Black') format('svg'); /* iOS 4.1- */
-  }
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Bold.eot');
+    src : url('../font/Noto_Sans_SC/NotoSansSC-Bold.woff2') format('woff2'), 
+    url('../font/Noto_Sans_SC/NotoSansSC-Bold.ttf') format('truetype'), 
+}
+
+
 
 h2{
     font-family: "NotoSansSC-Bold" !important;
