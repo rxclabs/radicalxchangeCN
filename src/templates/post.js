@@ -9,6 +9,7 @@ import {
   Text,
   Divider,
   Flex,
+  Image,
 } from "@chakra-ui/core"
 import Layout from "../components/layout"
 import Content from "../components/content"
@@ -26,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         mx="auto"
         px="30px"
         pt={["20px", "20px", "50px", "10vh"]}
-        mb="40vh"
+        mb={["15vh","15vh","20vh","40vh"]}
       >
         <Heading
           lineHeight="7vh"
@@ -45,7 +46,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         >
           {post.frontmatter.description}
         </Text>
-        <Divider />
+        <Divider/>
+
         <Stack isInline mt="1.5rem" mb="2rem">
           <Avatar
             w="25px"
@@ -59,19 +61,43 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </Stack>
 
         <Content input={post.html} />
-
-        <Flex justifyContent="space-between" mt="5rem">
-          <Box style={{ listStyleType: "none" }} >
+        <Divider/>
+        <Flex
+          justifyContent={["center", "center", "center", "space-between"]}
+          mt="10rem"
+          flexWrap="wrap"
+        >
+          <Box  w={["100%","100%","80%","40%"]} h="100%">
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link to={previous.fields.slug} rel="nepreviousxt">
+                <Image
+                  w={["100%", "100%", "100%", "100%"]}
+                  h={["100%", "100%", "100%", "15vh"]}
+                  objectFit="cover"
+                  src={previous.frontmatter.img.childImageSharp.fluid.src}
+                  alt={previous.frontmatter.title}
+                />
+                <Heading fontSize="2xl" mt={4}>
+                  {previous.frontmatter.title}
+                </Heading>
               </Link>
             )}
           </Box>
-          <Box style={{ listStyleType: "none" }} >
+
+          <Box   w={["100%","100%","80%","40%"]}  h="100%" mt={["10vh","10vh","10vh","0"]}>
             {next && (
-              <Link to={next.fields.slug} rel="next" >
-               {next.frontmatter.title} →
+              <Link to={next.fields.slug} rel="next">
+                <Image
+                  w={["100%", "100%", "100%", "100%"]}
+                  h={["100%", "100%", "100%", "15vh"]}
+                  objectFit="cover"
+                  src={next.frontmatter.img.childImageSharp.fluid.src}
+                  alt={next.frontmatter.title}
+                />
+                <Heading mt={4} fontSize="2xl">
+                  {" "}
+                  {next.frontmatter.title}
+                </Heading>
               </Link>
             )}
           </Box>
