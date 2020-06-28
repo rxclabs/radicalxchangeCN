@@ -6,7 +6,6 @@ import {
   Text,
   Stack,
   PseudoBox,
-  Avatar,
   Heading,
   useColorMode
 } from "@chakra-ui/core"
@@ -60,7 +59,6 @@ const EachList = ({ value }) => {
               cursor="pointer"
             >
               <PseudoBox
-                as="h2"
                 mb="12px"
                 fontSize="1.6rem"
                 mt={["1.2rem", "1.2rem", "1.2rem", 0]}
@@ -73,7 +71,8 @@ const EachList = ({ value }) => {
                   mb="12px"
                   fontSize="2xl"
                   mt={"1.2rem"}
-                  color={colorMode == "light" ? "black" : "white"}
+                  color={colorMode === "light" ? "black" : "white"} 
+                  as="h4"
                 >
                   {value.frontmatter.title}
                 </Heading>
@@ -88,20 +87,13 @@ const EachList = ({ value }) => {
                 {description}...
               </Text>
               <Stack isInline>
-                <Avatar
-                  position="relative"
-                  top="-5px"
-                  w="25px"
-                  h="25px"
-                  name="author"
-                  src={value.frontmatter.authorimg.publicURL}
-                />
-
+                <Img fixed={value.frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
                 <Text
                   fontSize="0.5rem"
                   color="#6873e5"
                   fontWeight="700"
-                  lineHeight="1rem"
+                  lineHeight="1.5rem"
+                  ml="1rem"
                 >
                   {value.frontmatter.author}
                 </Text>
@@ -109,7 +101,7 @@ const EachList = ({ value }) => {
                   fontSize="0.5rem"
                   color="#aaa"
                   fontWeight="700"
-                  lineHeight="1rem"
+                  lineHeight="1.5rem"
                 >
                   {value.frontmatter.date}
                 </Text>

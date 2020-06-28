@@ -61,7 +61,7 @@ const Header = () => {
                   style={{ display: "inline", cursor: "pointer" }}
                 >
                   <Text display="inline-block" ml={8}  lineHeight="44px" color="#fff">
-                    <Link style={{fontSize: '14px', paddingBottom:'0.5vh', borderBottom:(windowGlobal == "/"+page[index]) ? "1px solid white" :"none"}} to={ "/"+page[index]} >{val}</Link>
+                    <Link style={{fontSize: '14px', paddingBottom:'0.5vh', borderBottom:(windowGlobal === "/"+page[index]) ? "1px solid white" :"none"}} to={ "/"+page[index]} >{val}</Link>
                   </Text>{" "}
                 </li>
               ))}
@@ -71,7 +71,7 @@ const Header = () => {
         {/* 右侧icon */}
        
         <Box lineHeight="30px">
-          {colorMode == "light" ? (
+          {colorMode === "light" ? (
           
             <Icon   name="sun" fontSize="20px" onClick={toggleColorMode} />
           ) : (

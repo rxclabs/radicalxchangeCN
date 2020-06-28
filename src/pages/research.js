@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import EachList from "../components/eachList"
 // ui
 import { Heading, Box, Text, Divider } from "@chakra-ui/core"
+import { graphql } from 'gatsby'
 
 const Research = ({ data }) => {
   return (
@@ -53,7 +54,11 @@ export const query = graphql`
           date(formatString: "YYYY-MM-DD")
           description
           authorimg {
-            publicURL
+            childImageSharp {
+              fixed(width: 25, height: 25) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
           img {
             childImageSharp {

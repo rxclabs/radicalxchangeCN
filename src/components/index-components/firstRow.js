@@ -5,7 +5,6 @@ import {
   Box,
   PseudoBox,
   Text,
-  Avatar,
   Stack,
   useColorMode
 } from "@chakra-ui/core"
@@ -30,11 +29,11 @@ const FirstRow = ({ data }) => {
       <PseudoBox
         display="flex"
         flexDir={["column", "column", "column", "row"]}
-        paddingBottom="4vw"
         w={["100%", "45%", "45%", "97.5%"]}
         borderBottom="1px solid #eee"
         mx="auto"
         mb="4vw"
+        paddingBottom="4vw"
         _hover={{ color: " #6873e5" }}
       >
          
@@ -68,13 +67,13 @@ const FirstRow = ({ data }) => {
               fontFamily="NotoSansSC-Medium "
               mt={["1.2rem", "1.2rem", "1.2rem", 0]}
             >
-              <Heading mb="12px" fontSize="2xl" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+              <Heading mb="12px" fontSize={["1.1rem","1.1rem","1.1rem","2xl"]} mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
                 {data[0].frontmatter.title}
               </Heading>
             </PseudoBox>
             <Text
               mb="1.5em"
-              fontSize="1.1rem"
+              fontSize={["0.9rem","0.9rem","0.9rem","1.1rem"]}
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -84,12 +83,7 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[0].frontmatter.authorimg.publicURL}
-              />
+              <Img fixed={data[0].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -119,8 +113,9 @@ const FirstRow = ({ data }) => {
         borderBottom="1px solid #eee"
         mx="auto"
         mb="4vw"
-        paddingBottom="4vw"
+        pb="4vw"
         _hover={{ color: " #6873e5" }}
+        mt={['0','1.5rem','1.5rem',0]}
       >
         <Link to={data[1].fields.slug}>
           {/* 图片 */}
@@ -149,7 +144,7 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
                 {data[1].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -165,12 +160,7 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[1].frontmatter.authorimg.publicURL}
-              />
+               <Img fixed={data[1].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -201,7 +191,7 @@ const FirstRow = ({ data }) => {
         borderBottom="1px solid #eee"
         mx="auto"
         mb="4vw"
-        paddingBottom="4vw"
+        pb="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[2].fields.slug}>
@@ -231,7 +221,7 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-             <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+             <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
                 {data[2].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -247,12 +237,7 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[2].frontmatter.authorimg.publicURL}
-              />
+              <Img fixed={data[2].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -312,7 +297,7 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-            <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+            <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
                 {data[3].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -328,12 +313,7 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[3].frontmatter.authorimg.publicURL}
-              />
+              <Img fixed={data[3].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -363,7 +343,7 @@ const FirstRow = ({ data }) => {
         mx="auto"
         borderBottom="1px solid #eee"
         mb="4vw"
-        paddingBottom="4vw"
+        pb="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[4].fields.slug}>
@@ -386,7 +366,7 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
               {data[4].frontmatter.title}
             </Heading>
             <Text
@@ -397,17 +377,12 @@ const FirstRow = ({ data }) => {
               letterSpacing="0.025vw"
               fontFamily="NotoSansSC-Medium !important"
             >
-              {data[4].frontmatter.description.substring(0, 70)}...
+              {data[4].frontmatter.description.substring(0,70)}...
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[4].frontmatter.authorimg.publicURL}
-              />
-              <Flex flexDir="column">
+              <Img fixed={data[4].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Flex flexDir="column" ml="1rem">
                 <Text
                   fontSize="0.5rem"
                   color="#6873e5"
@@ -437,7 +412,7 @@ const FirstRow = ({ data }) => {
         mx="auto"
         borderBottom="1px solid #eee"
         mb="4vw"
-        paddingBottom="4vw"
+        pb="4vw"
         _hover={{ color: " #6873e5" }}
       >
         <Link to={data[5].fields.slug}>
@@ -460,7 +435,7 @@ const FirstRow = ({ data }) => {
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode == "light" ? "black":"white"}>
+          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
               {data[5].frontmatter.title}
             </Heading>
             <Text
@@ -475,13 +450,8 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Avatar
-                w="32px"
-                h="32px"
-                name="author"
-                src={data[5].frontmatter.authorimg.publicURL}
-              />
-              <Flex flexDir="column">
+              <Img fixed={data[5].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Flex flexDir="column"  ml="1rem">
                 <Text
                   fontSize="0.5rem"
                   color="#6873e5"

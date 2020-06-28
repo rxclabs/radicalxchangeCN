@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 // ui
-import { Heading, Box, Text, Divider, Link, Flex } from "@chakra-ui/core"
+import { Heading, Box, Text, Divider, Link } from "@chakra-ui/core"
 import ConceptBody from "../components/conceptBody"
 
 const Concept = () => {

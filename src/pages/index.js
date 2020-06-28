@@ -17,7 +17,11 @@ const IndexPage = () => {
             date(formatString: "YYYY-MM-DD")
             description
             authorimg {
-              publicURL
+              childImageSharp {
+                fixed(width: 32, height: 32) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
             }
             img {
               childImageSharp {
