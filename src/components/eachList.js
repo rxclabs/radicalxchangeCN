@@ -41,13 +41,21 @@ const EachList = ({ value }) => {
             <PseudoBox
               w={["100%", "100%", "100%", "45%"]}
               mx={["auto", "auto", "auto", 0]}
-              boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+              boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
               position="relative"
-              _hover={{
-                boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-                top: "-1px",
-                transition: "all 1000ms ease 0s",
-              }}
+              _hover={
+                colorMode === "light"
+                  ? {
+                      boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                      top: "-1px",
+                      transition: "all 1000ms ease 0s",
+                    }
+                  : {
+                      boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                      top: "-1px",
+                      transition: "all 1000ms ease 0s",
+                    }
+              }
             >
               <Img fluid={value.frontmatter.img.childImageSharp.fluid} />
             </PseudoBox>

@@ -1,11 +1,11 @@
 import React  from 'react'
 import Layout from "../components/layout"
-import { Box, Text, ListItem, Flex,PseudoBox, Heading } from "@chakra-ui/core"
+import { Box, Text, ListItem, Flex,PseudoBox, Heading,  useColorMode } from "@chakra-ui/core"
 import { FaMeetup, FaTwitter } from "react-icons/fa"
 import SEO from "../components/seo"
 
 const About = () => {
-
+  const { colorMode, toggleColorMode } = useColorMode()
     return (
       <Layout>
             <SEO title="关于" />
@@ -92,7 +92,7 @@ const About = () => {
           >
             <PseudoBox
              as="button"
-              backgroundColor="rgb(249,248,253)"
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
               p={4}
               m={2}
               rounded={12}
@@ -112,7 +112,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-              backgroundColor="rgb(249,248,253)"
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
               p={4}
               m={2}
               rounded={12}
@@ -130,7 +130,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-              backgroundColor="rgb(249,248,253)"
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
               p={4}
               m={2}
               rounded={12}
@@ -148,7 +148,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-              backgroundColor="rgb(249,248,253)"
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
               p={4}
               m={2}
               rounded={12}
@@ -168,7 +168,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-              backgroundColor="rgb(249,248,253)"
+              backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}    
               p={4}
               m={2}
               rounded={12}

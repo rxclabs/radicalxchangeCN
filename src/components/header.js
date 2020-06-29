@@ -1,34 +1,45 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import { Flex, Box, Icon, Text, useColorMode, Heading } from "@chakra-ui/core"
-
+import {
+  Flex,
+  Box,
+  Icon,
+  Text,
+  useColorMode,
+  Heading,
+  Collapse,
+  PseudoBox,
+} from "@chakra-ui/core"
+import { FaBars } from "react-icons/fa"
 
 const Header = () => {
-
-  const windowGlobal = typeof window !== 'undefined' && window.location.pathname
+  const windowGlobal = typeof window !== "undefined" && window.location.pathname
 
   const [navList, setnavList] = useState(["新闻", "研究", "理念", "关于"])
-  const [infoList, setinfoList] = useState([
-    "技术",
-    "经济",
-    "设计",
-    "社会",
-  ])
+  const [infoList, setinfoList] = useState(["技术", "经济", "设计", "社会"])
+
+  // 夜间模式状态
   const { colorMode, toggleColorMode } = useColorMode()
 
   const [page, setnavPage] = useState(["news", "research", "concept", "about"])
 
+  // 导航栏点击
 
- 
+  const [show, setShow] = React.useState(false)
+
+  const handleToggle = () => setShow(!show)
+
   return (
     // 外部背景颜色
     <Box
       // background="linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
-      background= {windowGlobal === '/' ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)" :"linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)"} 
+      background={
+        windowGlobal === "/"
+          ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
+          : "linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)"
+      }
       h="100%"
     >
-
-
       {/* 第一栏 */}
       <Flex
         w="100%"
@@ -40,7 +51,43 @@ const Header = () => {
       >
         {/* 左侧navbar */}
         <Flex>
+        <Box display={["inline", "inline", "none", "none"]}>
+            <PseudoBox mt="0.5rem" _hover={{ color: " #6873e5" }}>
+              <FaBars variantColor="blue" onClick={handleToggle} />
+            </PseudoBox>
+            <Collapse mt={3} isOpen={show} position="absolute"  zIndex={1000} backgroundColor="#ccc">
+              <ul>
+                {navList.map((val, index) => (
+                  <li
+                    key={index}
+                    style={{  cursor: "pointer" , listStyleType:"none" }}
+                  >
+                    <Text
+                      display="inline-block"
+                      lineHeight="44px"
+                      color="#fff"
+                    >
+                      <Link
+                        style={{
+                          fontSize: "14px",
+                          paddingBottom: "0.5vh",
+                          borderBottom:
+                            windowGlobal === "/" + page[index]
+                              ? "1px solid white"
+                              : "none",
+                        }}
+                        to={"/" + page[index]}
+                      >
+                        {val}
+                      </Link>
+                    </Text>{" "}
+                  </li>
+                ))}
+              </ul>
+            </Collapse>
+          </Box>
           <Text
+            ml={['2vw','2vw',0,0]}
             fontSize="20px"
             fontWeigh={300}
             pr={8}
@@ -54,78 +101,93 @@ const Header = () => {
           </Text>
           <Box display={["none", "none", "inline", "inline"]}>
             <ul>
-              {/* <li style={{display:'inline'}}>新闻</li> */}
               {navList.map((val, index) => (
                 <li
                   key={index}
                   style={{ display: "inline", cursor: "pointer" }}
                 >
-                  <Text display="inline-block" ml={8}  lineHeight="44px" color="#fff">
-                    <Link style={{fontSize: '14px', paddingBottom:'0.5vh', borderBottom:(windowGlobal === "/"+page[index]) ? "1px solid white" :"none"}} to={ "/"+page[index]} >{val}</Link>
+                  <Text
+                    display="inline-block"
+                    ml={8}
+                    lineHeight="44px"
+                    color="#fff"
+                  >
+                    <Link
+                      style={{
+                        fontSize: "14px",
+                        paddingBottom: "0.5vh",
+                        borderBottom:
+                          windowGlobal === "/" + page[index]
+                            ? "1px solid white"
+                            : "none",
+                      }}
+                      to={"/" + page[index]}
+                    >
+                      {val}
+                    </Link>
                   </Text>{" "}
                 </li>
               ))}
             </ul>
           </Box>
+         
         </Flex>
         {/* 右侧icon */}
-       
+
         <Box lineHeight="30px">
           {colorMode === "light" ? (
-          
-            <Icon   name="sun" fontSize="20px" onClick={toggleColorMode} />
+            <Icon name="sun" fontSize="20px" onClick={toggleColorMode} />
           ) : (
-
-            <Icon  name="moon" fontSize="20px" onClick={toggleColorMode} />
-
+            <Icon name="moon" fontSize="20px" onClick={toggleColorMode} />
           )}
         </Box>
-
       </Flex>
       {/* 第二栏 */}
-      {
-        windowGlobal=== "/" ? (
-          <>
-            {" "}
-            <Box
-              w="100%"
-              maxW={1080}
-              mx="auto"
-              color="white"
-              padding="0px 10px 30px 10px"
-              marginTop="10vh"
-              marginBottom="1vh"
+      {windowGlobal === "/" ? (
+        <>
+          {" "}
+          <Box
+            w="100%"
+            maxW={1080}
+            mx="auto"
+            color="white"
+            padding="0px 10px 30px 10px"
+            marginTop="10vh"
+            marginBottom="1vh"
+          >
+            <Heading
+              fontSize={60}
+              textAlign="center"
+              fontFamily="Pirou !important"
             >
-              <Heading fontSize={60} textAlign="center" fontFamily="Pirou !important" >
-                RXC
-              </Heading>
-              <ul style={{ listStyle: "none", textAlign: "center" }}>
-                {infoList.map((val, index) => (
-                  <li key={index} style={{ display: "inline" }}>
-                    <Text display="inline-block" color="#fff">
-                      {index === 0 ? null : (
-                        <span style={{ padding: "8px" }}>•</span>
-                      )}
-                      {val}
-                    </Text>
-                  </li>
-                ))}
-              </ul>
-            </Box>
-            <Box marginBottom="1vh">
-              <Heading
-                pr={10}
-                color="rgba(238,239,254,0.1)"
-                fontSize={["1.5rem","2rem","2.2rem","3.2rem"]}
-                textAlign="right"
-                fontFamily="LeagueSpartan  !important"
-              >
-                RadicalxChange
-              </Heading>
-            </Box>{" "}
-          </>
-        ) : null
-      }
+              RXC
+            </Heading>
+            <ul style={{ listStyle: "none", textAlign: "center" }}>
+              {infoList.map((val, index) => (
+                <li key={index} style={{ display: "inline" }}>
+                  <Text display="inline-block" color="#fff">
+                    {index === 0 ? null : (
+                      <span style={{ padding: "8px" }}>•</span>
+                    )}
+                    {val}
+                  </Text>
+                </li>
+              ))}
+            </ul>
+          </Box>
+          <Box marginBottom="1vh">
+            <Heading
+              pr={10}
+              color="rgba(238,239,254,0.1)"
+              fontSize={["1.5rem", "2rem", "2.2rem", "3.2rem"]}
+              textAlign="right"
+              fontFamily="LeagueSpartan  !important"
+            >
+              RadicalxChange
+            </Heading>
+          </Box>{" "}
+        </>
+      ) : null}
     </Box>
   )
 }

@@ -6,13 +6,12 @@ import {
   PseudoBox,
   Text,
   Stack,
-  useColorMode
+  useColorMode,
 } from "@chakra-ui/core"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const FirstRow = ({ data }) => {
-
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -41,13 +40,21 @@ const FirstRow = ({ data }) => {
           w="100%"
           maxW={["400px", "400px", "620px", "620px"]}
           mx="auto"
-          boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+          boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
           position="relative"
-          _hover={{
-            boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-            top: "-1px",
-            transition: "all 1000ms ease 0s",
-          }}
+          _hover={
+            colorMode === "light"
+              ? {
+                  boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                  top: "-1px",
+                  transition: "all 1000ms ease 0s",
+                }
+              : {
+                  boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                  top: "-1px",
+                  transition: "all 1000ms ease 0s",
+                }
+          }
         >
           <Img fluid={data[0].frontmatter.img.childImageSharp.fluid} />
         </PseudoBox>
@@ -59,7 +66,6 @@ const FirstRow = ({ data }) => {
         >
           <Link to={data[0].fields.slug}>
             <PseudoBox
-            
               mb="12px"
               fontWeight="900"
               fontSize="2rem"
@@ -67,13 +73,20 @@ const FirstRow = ({ data }) => {
               fontFamily="NotoSansSC-Medium "
               mt={["1.2rem", "1.2rem", "1.2rem", 0]}
             >
-              <PseudoBox as="h2" mb="12px"   _hover={{ color: " #6873e5" }} fontSize={["1.1rem","1.1rem","1.1rem","2xl"]} mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+              <PseudoBox
+                as="h2"
+                mb="12px"
+                _hover={{ color: " #6873e5" }}
+                fontSize={["1.1rem", "1.1rem", "1.1rem", "2xl"]}
+                mt={"1.2rem"}
+                color={colorMode === "light" ? "black" : "white"}
+              >
                 {data[0].frontmatter.title}
               </PseudoBox>
             </PseudoBox>
             <Text
               mb="1.5em"
-              fontSize={["0.9rem","0.9rem","0.9rem","1.1rem"]}
+              fontSize={["0.9rem", "0.9rem", "0.9rem", "1.1rem"]}
               lineHeight="1.5em"
               color="#999"
               letterSpacing="0.025vw"
@@ -83,7 +96,10 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Img fixed={data[0].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Img
+                fixed={data[0].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -115,7 +131,7 @@ const FirstRow = ({ data }) => {
         mb="4vw"
         pb="4vw"
         _hover={{ color: " #6873e5" }}
-        mt={['0','1.5rem','1.5rem',0]}
+        mt={["0", "1.5rem", "1.5rem", 0]}
       >
         <Link to={data[1].fields.slug}>
           {/* 图片 */}
@@ -123,13 +139,21 @@ const FirstRow = ({ data }) => {
             w="100%"
             maxW={["400px", "400px", "620px", "620px"]}
             mx="auto"
-            boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+            boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
             position="relative"
-            _hover={{
-              boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-              top: "-1px",
-              transition: "all 1000ms ease 0s",
-            }}
+            _hover={
+              colorMode === "light"
+                ? {
+                    boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+                : {
+                    boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+            }
           >
             <Img fluid={data[1].frontmatter.img.childImageSharp.fluid} />
           </PseudoBox>
@@ -144,7 +168,12 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+              <Heading
+                mb="12px"
+                fontSize="1.1rem"
+                mt={"1.2rem"}
+                color={colorMode === "light" ? "black" : "white"}
+              >
                 {data[1].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -160,7 +189,10 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-               <Img fixed={data[1].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Img
+                fixed={data[1].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -200,13 +232,21 @@ const FirstRow = ({ data }) => {
             w="100%"
             maxW={["400px", "400px", "620px", "620px"]}
             mx="auto"
-            boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+            boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
             position="relative"
-            _hover={{
-              boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-              top: "-1px",
-              transition: "all 1000ms ease 0s",
-            }}
+            _hover={
+              colorMode === "light"
+                ? {
+                    boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+                : {
+                    boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+            }
           >
             <Img fluid={data[2].frontmatter.img.childImageSharp.fluid} />
           </PseudoBox>
@@ -221,7 +261,12 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-             <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+              <Heading
+                mb="12px"
+                fontSize="1.1rem"
+                mt={"1.2rem"}
+                color={colorMode === "light" ? "black" : "white"}
+              >
                 {data[2].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -237,7 +282,10 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Img fixed={data[2].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Img
+                fixed={data[2].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -276,13 +324,21 @@ const FirstRow = ({ data }) => {
             w="100%"
             maxW={["400px", "400px", "620px", "620px"]}
             mx="auto"
-            boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+            boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
             position="relative"
-            _hover={{
-              boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-              top: "-1px",
-              transition: "all 1000ms ease 0s",
-            }}
+            _hover={
+              colorMode === "light"
+                ? {
+                    boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+                : {
+                    boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+            }
           >
             <Img fluid={data[3].frontmatter.img.childImageSharp.fluid} />
           </PseudoBox>
@@ -297,7 +353,12 @@ const FirstRow = ({ data }) => {
               mt={["1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
               fontFamily="NotoSansSC-Medium"
             >
-            <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+              <Heading
+                mb="12px"
+                fontSize="1.1rem"
+                mt={"1.2rem"}
+                color={colorMode === "light" ? "black" : "white"}
+              >
                 {data[3].frontmatter.title}
               </Heading>
             </PseudoBox>
@@ -313,7 +374,10 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline>
               {" "}
-              <Img fixed={data[3].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Img
+                fixed={data[3].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
               <Flex flexDir="column" ml="0.5vw">
                 <Text
                   fontSize="0.5rem"
@@ -354,19 +418,32 @@ const FirstRow = ({ data }) => {
             maxW={["400px", "400px", "500px", "500px"]}
             mx="auto"
             _hover={{ color: " #6873e5" }}
-            boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+            boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
             position="relative"
-            _hover={{
-              boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-              top: "-1px",
-              transition: "all 1000ms ease 0s",
-            }}
+            _hover={
+              colorMode === "light"
+                ? {
+                    boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+                : {
+                    boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+            }
           >
             <Img fluid={data[4].frontmatter.img.childImageSharp.fluid} />
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+            <Heading
+              mb="12px"
+              fontSize="1.1rem"
+              mt={"1.2rem"}
+              color={colorMode === "light" ? "black" : "white"}
+            >
               {data[4].frontmatter.title}
             </Heading>
             <Text
@@ -377,11 +454,14 @@ const FirstRow = ({ data }) => {
               letterSpacing="0.025vw"
               fontFamily="NotoSansSC-Medium !important"
             >
-              {data[4].frontmatter.description.substring(0,70)}...
+              {data[4].frontmatter.description.substring(0, 70)}...
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Img fixed={data[4].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
+              <Img
+                fixed={data[4].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
               <Flex flexDir="column" ml="1rem">
                 <Text
                   fontSize="0.5rem"
@@ -423,19 +503,32 @@ const FirstRow = ({ data }) => {
             maxW={["400px", "400px", "500px", "500px"]}
             mx="auto"
             _hover={{ color: " #6873e5" }}
-            boxShadow="-1.5em 1em 4em #ccc, 0em 0 1em #ccc;"
+            boxShadow={ colorMode === "light" ? "-1.5em 1em 4em #ccc, 0em 0 1em #ccc" : "-1.5em 1em 4em #000, 0em 0 1em #2D3748"}
             position="relative"
-            _hover={{
-              boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
-              top: "-1px",
-              transition: "all 1000ms ease 0s",
-            }}
+            _hover={
+              colorMode === "light"
+                ? {
+                    boxShadow: "-1em 0.5em 10em #ccc,  0em 0 2em #ccc;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+                : {
+                    boxShadow: "-1em 0.5em 10em #4A5568,  0em 0 2em #4A5568;",
+                    top: "-1px",
+                    transition: "all 1000ms ease 0s",
+                  }
+            }
           >
             <Img fluid={data[5].frontmatter.img.childImageSharp.fluid} />
           </PseudoBox>
           {/* 描述 */}
           <Box px={["5vw", 0, 0, 0]}>
-          <Heading mb="12px" fontSize="1.1rem" mt={"1.2rem"} color={colorMode === "light" ? "black":"white"}>
+            <Heading
+              mb="12px"
+              fontSize="1.1rem"
+              mt={"1.2rem"}
+              color={colorMode === "light" ? "black" : "white"}
+            >
               {data[5].frontmatter.title}
             </Heading>
             <Text
@@ -450,8 +543,11 @@ const FirstRow = ({ data }) => {
             </Text>
             <Stack isInline mb="1vw">
               {" "}
-              <Img fixed={data[5].frontmatter.authorimg.childImageSharp.fixed} style={{borderRadius: '50%'}}/>
-              <Flex flexDir="column"  ml="1rem">
+              <Img
+                fixed={data[5].frontmatter.authorimg.childImageSharp.fixed}
+                style={{ borderRadius: "50%" }}
+              />
+              <Flex flexDir="column" ml="1rem">
                 <Text
                   fontSize="0.5rem"
                   color="#6873e5"
