@@ -87,7 +87,7 @@ const Wrapper_dark = styled.div`
 const Content = ({ input }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  return (<>{console.log(colorMode)} { colorMode === 'light' ?  <Wrapper_light dangerouslySetInnerHTML={{ __html: input }} /> : <Wrapper_dark dangerouslySetInnerHTML={{ __html: input }} />}</>)
+  return (<>{ colorMode === 'light' ?  <Wrapper_light dangerouslySetInnerHTML={{ __html: input }} /> : <Wrapper_dark dangerouslySetInnerHTML={{ __html: input }} />}</>)
 }
 
 export default Content
