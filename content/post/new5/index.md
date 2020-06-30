@@ -1,4 +1,5 @@
 ---
+slug: news5
 title: 新常态下人类合作的激进策略
 date: 2020-06-24T02:50:43.825Z
 featuredpost: true

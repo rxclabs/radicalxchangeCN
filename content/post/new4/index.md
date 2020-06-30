@@ -1,4 +1,5 @@
 ---
+slug: news4
 title: 以世界为中心的区块链游戏作为激进市场的游乐场
 date: 2020-06-24T03:01:23.678Z
 featuredpost: true

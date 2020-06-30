@@ -1,4 +1,5 @@
 ---
+slug: news2
 title: Gitcoin用二次金融对抗COVID-19
 date: 2020-06-24T03:05:43.117Z
 featuredpost: true
