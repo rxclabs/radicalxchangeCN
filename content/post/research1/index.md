@@ -1,5 +1,5 @@
 ---
-slug: research1
+path: research1
 title: 使系统的法律变革民主化
 date: 2020-06-24T03:44:54.868Z
 featuredpost: true

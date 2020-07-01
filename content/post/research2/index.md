@@ -1,5 +1,5 @@
 ---
-slug: chao
+path: chao
 title: test
 date: 2020-06-30T16:37:01.491Z
 featuredpost: true

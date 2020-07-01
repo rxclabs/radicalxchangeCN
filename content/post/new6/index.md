@@ -1,5 +1,5 @@
 ---
-slug: news6
+path: news6
 title: 使系统的法律变革民主化2
 date: 2020-06-25T03:44:54.868Z
 featuredpost: true

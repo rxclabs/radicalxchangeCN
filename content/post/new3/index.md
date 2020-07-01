@@ -1,5 +1,5 @@
 ---
-slug: news3
+path: news3
 title: 在丰富与稀缺之间
 date: 2020-06-24T02:15:01.762Z
 featuredpost: true

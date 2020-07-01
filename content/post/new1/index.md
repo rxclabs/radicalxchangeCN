@@ -1,5 +1,5 @@
 ---
-slug: news11
+path: news11
 title: GitxChange：建立合作多元化的根源
 date: 2020-06-24T02:59:27.380Z
 featuredpost: true

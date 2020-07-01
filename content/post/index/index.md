@@ -1,5 +1,5 @@
 ---
-slug: research3
+path: research3
 title: 测试3
 date: 2020-06-30T16:50:13.540Z
 featuredpost: true
