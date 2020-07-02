@@ -4,12 +4,14 @@ import {
   AiOutlineTwitter,
   AiOutlineWechat,
 } from "react-icons/ai"
-import { Flex, Text } from "@chakra-ui/core"
+import { Flex, Text,useColorMode } from "@chakra-ui/core"
 
 const Footer = () => {
+    // 夜间模式状态
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Flex
-      backgroundColor="#eeeffe"
+      backgroundColor={colorMode === "light" ?"#eeeffe":"#72759E"}
       justifyContent="center"
       height={110}
       flexDirection="column"
