@@ -2,10 +2,19 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 // ui
-import { Heading, Box, Text, Divider, Link } from "@chakra-ui/core"
+import {
+  Heading,
+  Box,
+  Text,
+  Divider,
+  Link,
+  useColorMode,
+} from "@chakra-ui/core"
 import ConceptBody from "../components/conceptBody"
 
 const Concept = () => {
+  // 夜间模式状态
+  const { colorMode, toggleColorMode } = useColorMode()
   let list = [
     [
       {
@@ -90,15 +99,19 @@ const Concept = () => {
     [
       {
         title: "博格尔对指数基金发出警告",
-        link: "https://www.wsj.com/articles/bogle-sounds-a-warning-on-index-funds-1543504551",
-      },    {
+        link:
+          "https://www.wsj.com/articles/bogle-sounds-a-warning-on-index-funds-1543504551",
+      },
+      {
         title: "激进市场的第四章",
         link: "http://radicalmarkets.com/chapters/dismembering-the-octopus/",
-      },    {
-        title: "普通股股份面临监管审查",
-        link: "https://amp.ft.com/content/59325462-fe57-11e8-aebf-99e208d3e521?",
       },
-    ]
+      {
+        title: "普通股股份面临监管审查",
+        link:
+          "https://amp.ft.com/content/59325462-fe57-11e8-aebf-99e208d3e521?",
+      },
+    ],
   ]
 
   return (
@@ -131,7 +144,7 @@ const Concept = () => {
           <Link
             href="https://press.princeton.edu/books/hardcover/9780691177502/radical-markets"
             textDecor="underline"
-            color="#3d1472"
+            color={colorMode === "light" ? "#3d1472" : "#9665D4"}
             fontWeight={600}
           >
             Radical Markets

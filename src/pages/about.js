@@ -92,7 +92,7 @@ const About = () => {
           >
             <PseudoBox
              as="button"
-             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#444C5E"}  
               p={4}
               m={2}
               rounded={12}
@@ -112,7 +112,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#444C5E"}  
               p={4}
               m={2}
               rounded={12}
@@ -130,7 +130,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#444C5E"}  
               p={4}
               m={2}
               rounded={12}
@@ -148,7 +148,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}  
+             backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#444C5E"}  
               p={4}
               m={2}
               rounded={12}
@@ -168,7 +168,7 @@ const About = () => {
   
             <PseudoBox
              as="button"
-              backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#ccc"}    
+              backgroundColor={ colorMode === "light" ? "rgb(249,248,253)" : "#444C5E"}    
               p={4}
               m={2}
               rounded={12}

@@ -35,8 +35,8 @@ const Header = () => {
       // background="linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
       background={
         windowGlobal === "/"
-          ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
-          : "linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)"
+          ? colorMode === "light" ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)":"linear-gradient(162deg, rgba(121, 5, 171, 0.3) 50%, rgba(92, 16, 123,0.3) 0%)"
+          : colorMode === "light" ?  "linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)" : "linear-gradient(165deg, rgba(121, 5, 171, 0.3) 77%, rgb(92, 16, 123,0.3) 0%)"
       }
       h="100%"
     >

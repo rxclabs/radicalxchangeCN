@@ -1,11 +1,15 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Heading, Box, Text,  Link, Flex } from "@chakra-ui/core"
+import { Heading, Box, Text, Link, Flex, useColorMode } from "@chakra-ui/core"
 import Img from "gatsby-image"
 const ConceptBody = ({ title, body, list }) => {
+  // 夜间模式状态
+  const { colorMode, toggleColorMode } = useColorMode()
   const data = useStaticQuery(graphql`
     {
-      allImageSharp(filter: {resolutions: {originalName: {eq: "gatsby-icon.png"}}}) {
+      allImageSharp(
+        filter: { resolutions: { originalName: { eq: "gatsby-icon.png" } } }
+      ) {
         nodes {
           fixed(width: 35, height: 35) {
             ...GatsbyImageSharpFixed
@@ -19,7 +23,6 @@ const ConceptBody = ({ title, body, list }) => {
       <Box
         mt="8vh"
         border="1px solid black"
-
         px={8}
         borderRadius="1rem"
         boxShadow="0 0 0.6rem #888"
@@ -48,9 +51,8 @@ const ConceptBody = ({ title, body, list }) => {
             {list.map((val, index) => (
               <li key={index}>
                 <Link
-                  color="#3d1472"
                   fontWeight={600}
-                  color="#3d1472"
+                  color={colorMode === "light" ? "#3d1472" : "#9665D4"}
                   fontWeight={600}
                   href={val.link}
                 >
@@ -66,7 +68,6 @@ const ConceptBody = ({ title, body, list }) => {
 }
 
 export default ConceptBody
-
 
 // {
 //   imageSharp(id: { eq: "2cb3bf89-545a-5b6d-bd70-fbb631ccdb9b" }) {
