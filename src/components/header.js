@@ -15,13 +15,13 @@ import { FaBars } from "react-icons/fa"
 const Header = () => {
   const windowGlobal = typeof window !== "undefined" && window.location.pathname
 
-  const [navList, setnavList] = useState(["新闻", "研究", "理念", "关于"])
+  const [navList, setnavList] = useState(["新闻", "研究", "关于"])
   const [infoList, setinfoList] = useState(["技术", "经济", "设计", "社会"])
 
   // 夜间模式状态
   const { colorMode, toggleColorMode } = useColorMode()
 
-  const [page, setnavPage] = useState(["news", "research", "concept", "about"])
+  const [page, setnavPage] = useState(["news", "research", "about"])
 
   // 导航栏点击
 

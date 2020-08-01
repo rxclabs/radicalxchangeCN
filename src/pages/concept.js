@@ -127,7 +127,7 @@ const Concept = () => {
         mb="30vh"
       >
         <Heading fontSize="2.5rem" fontFamily="NotoSansSC-Regular">
-          理念
+          理念与思潮
         </Heading>
         <Text
           color="#969696"
