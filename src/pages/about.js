@@ -9,7 +9,7 @@ import {
   Heading,
   useColorMode,
 } from "@chakra-ui/core"
-import { FaMeetup, FaTwitter } from "react-icons/fa"
+import { FaTwitter } from "react-icons/fa"
 import SEO from "../components/seo"
 import Concept from "../components/concept"
 
@@ -74,9 +74,9 @@ const About = () => {
         <ListItem lineHeight="taller">
           尊重：RxC社区成员彼此平等，珍视每个成员的想法并得以讨论。
         </ListItem>
-          {/* 城市论坛 */}
+        {/* 城市论坛 */}
         <Text mt={10} fontWeight="bold" fontSize="lg">
-        RxC城市论坛：
+          RxC城市论坛：
         </Text>
 
         {/* 第一栏 */}
@@ -108,9 +108,10 @@ const About = () => {
               RadicalxChange Canton/广州
             </Text>
             <Flex justifyContent="center" mt={2}>
-              <FaMeetup />
               <Box w={2} />
-              <a href="https://twitter.com/RxCCanton"><FaTwitter /></a>
+              <a href="https://twitter.com/RxCCanton">
+                <FaTwitter />
+              </a>
             </Flex>
           </PseudoBox>
 
@@ -134,7 +135,9 @@ const About = () => {
               RadicalxChange Shanghai/上海
             </Text>
             <Flex justifyContent="center" mt={2}>
-            <a href="https://twitter.com/RxCShanghai"><FaTwitter /></a>
+              <a href="https://twitter.com/RxCShanghai">
+                <FaTwitter />
+              </a>
             </Flex>
           </PseudoBox>
 
@@ -158,7 +161,9 @@ const About = () => {
               RadicalxChange Beijing/北京
             </Text>
             <Flex justifyContent="center" mt={2}>
-            <a href="#"><FaTwitter /></a>
+              <a href="#">
+                <FaTwitter />
+              </a>
             </Flex>
           </PseudoBox>
 
@@ -182,9 +187,10 @@ const About = () => {
               RadicalxChange Shenzhen/深圳
             </Text>
             <Flex justifyContent="center" mt={2}>
-              <FaMeetup />
               <Box w={2} />
-              <a href="https://twitter.com/RxCShenzhen"><FaTwitter /></a>
+              <a href="https://twitter.com/RxCShenzhen">
+                <FaTwitter />
+              </a>
             </Flex>
           </PseudoBox>
 
@@ -208,9 +214,10 @@ const About = () => {
               RadicalxChange HongKong/香港
             </Text>
             <Flex justifyContent="center" mt={2}>
-              <FaMeetup />
               <Box w={2} />
-              <a href="https://twitter.com/RxCHongKong"><FaTwitter /></a>
+              <a href="https://twitter.com/RxCHongKong">
+                <FaTwitter />
+              </a>
             </Flex>
           </PseudoBox>
         </Flex>
