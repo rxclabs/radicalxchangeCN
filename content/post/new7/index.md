@@ -1,5 +1,5 @@
 ---
-path: news6
+path: news7
 title: VITALIK：GITCOIN GRANTS第六轮回顾
 date: 2020-08-28T03:44:54.868Z
 featuredpost: true
