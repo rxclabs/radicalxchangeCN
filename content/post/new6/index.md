@@ -3,10 +3,11 @@ path: news6
 title: VITALIK：GITCOIN GRANTS第六轮回顾
 date: 2020-08-28T03:44:54.868Z
 featuredpost: true
-img: cover.png
+img: cover.jpg
+
 authorimg: author.jpeg
 description: Gitcoin
-  Grants第六轮已经结束，总计**695个项目**接收到来自**1,526位捐赠者**的**227,847**美元**以及175,000美元**的匹配金额。本轮的参与项目主要分为三个类型：常规类型包括技术和社区
+  Grants第六轮已经结束，总计695个项目接收到来自1,526位捐赠者的227,847美元以及175,000美元的匹配金额。本轮的参与项目主要分为三个类型：常规类型包括技术和社区
   (更名自“媒体”以覆盖更大范围)，以及第六轮的特殊类别Crypto For Black Lives。
 tags: news
 author: Vitalik Buterin
