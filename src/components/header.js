@@ -7,8 +7,12 @@ import {
   Text,
   useColorMode,
   Heading,
-  Collapse,
+  useDisclosure,
   PseudoBox,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
 } from "@chakra-ui/core"
 import { FaBars } from "react-icons/fa"
 
@@ -29,14 +33,22 @@ const Header = () => {
 
   const handleToggle = () => setShow(!show)
 
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [placement, setPlacement] = React.useState("right")
+  const handlePlacementChange = event => setPlacement(event.target.value)
+
   return (
     // 外部背景颜色
     <Box
       // background="linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
       background={
         windowGlobal === "/"
-          ? colorMode === "light" ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)":"linear-gradient(162deg, rgba(121, 5, 171, 0.3) 50%, rgba(92, 16, 123,0.3) 0%)"
-          : colorMode === "light" ?  "linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)" : "linear-gradient(165deg, rgba(121, 5, 171, 0.3) 77%, rgb(92, 16, 123,0.3) 0%)"
+          ? colorMode === "light"
+            ? "linear-gradient(162deg, rgb(121, 5, 171) 50%, rgb(92, 16, 123) 0%)"
+            : "linear-gradient(162deg, rgba(121, 5, 171, 0.3) 50%, rgba(92, 16, 123,0.3) 0%)"
+          : colorMode === "light"
+          ? "linear-gradient(165deg, rgb(121, 5, 171) 77%, rgb(92, 16, 123) 0%)"
+          : "linear-gradient(165deg, rgba(121, 5, 171, 0.3) 77%, rgb(92, 16, 123,0.3) 0%)"
       }
       h="100%"
     >
@@ -51,43 +63,24 @@ const Header = () => {
       >
         {/* 左侧navbar */}
         <Flex>
-        <Box display={["inline", "inline", "none", "none"]}>
+          <Box display={["inline", "inline", "none", "none"]}>
             <PseudoBox mt="0.5rem" _hover={{ color: " #6873e5" }}>
-              <FaBars variantColor="blue" onClick={handleToggle} />
+              <FaBars variantColor="blue" onClick={onOpen} />
             </PseudoBox>
-            <Collapse mt={3} isOpen={show} position="absolute"  zIndex={1000} backgroundColor="#ccc">
-              <ul>
-                {navList.map((val, index) => (
-                  <li
-                    key={index}
-                    style={{  cursor: "pointer" , listStyleType:"none" }}
-                  >
-                    <Text
-                      display="inline-block"
-                      lineHeight="44px"
-                      color="#fff"
-                    >
-                      <Link
-                        style={{
-                          fontSize: "14px",
-                          paddingBottom: "0.5vh",
-                          borderBottom:
-                            windowGlobal === "/" + page[index]
-                              ? "1px solid white"
-                              : "none",
-                        }}
-                        to={"/" + page[index]}
-                      >
-                        {val}
-                      </Link>
-                    </Text>{" "}
-                  </li>
-                ))}
-              </ul>
-            </Collapse>
+            <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerHeader borderBottomWidth="1px">
+                  <Heading textAlign="center"><Link to="/news">新闻</Link></Heading>
+                  <Heading textAlign="center"><Link to="/research">研究</Link></Heading>
+                  <Heading textAlign="center"><Link to="/about">关于</Link></Heading>
+                </DrawerHeader>
+         
+              </DrawerContent>
+            </Drawer>
           </Box>
           <Text
-            ml={['2vw','2vw',0,0]}
+            ml={["2vw", "2vw", 0, 0]}
             fontSize="20px"
             fontWeigh={300}
             pr={8}
@@ -130,7 +123,6 @@ const Header = () => {
               ))}
             </ul>
           </Box>
-         
         </Flex>
         {/* 右侧icon */}
 
