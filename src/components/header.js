@@ -13,6 +13,8 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerHeader,
+  DrawerBody,
+  DrawerCloseButton
 } from "@chakra-ui/core"
 import { FaBars } from "react-icons/fa"
 
@@ -70,12 +72,30 @@ const Header = () => {
             <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
               <DrawerOverlay />
               <DrawerContent>
+              <DrawerCloseButton />
                 <DrawerHeader borderBottomWidth="1px">
-                  <Heading textAlign="center"><Link to="/news">新闻</Link></Heading>
-                  <Heading textAlign="center"><Link to="/research">研究</Link></Heading>
-                  <Heading textAlign="center"><Link to="/about">关于</Link></Heading>
+                  <Text
+                    fontSize="20px"
+                    fontWeigh={300}
+                    textAlign="center"
+                    borderRight={[0, 0, "1px solid #ccc", "1px solid #ccc"]}
+                    cursor="pointer"
+                    fontFamily="LeagueSpartan !important"
+                  >
+                    <Link to="/">RadicalxChange</Link>
+                  </Text>
                 </DrawerHeader>
-         
+                <DrawerBody>
+                  <Text textAlign="center">
+                    <Link to="/news">新闻</Link>
+                  </Text>
+                  <Text textAlign="center">
+                    <Link to="/research">研究</Link>
+                  </Text>
+                  <Text textAlign="center">
+                    <Link to="/about">关于</Link>
+                  </Text>
+                </DrawerBody>
               </DrawerContent>
             </Drawer>
           </Box>
