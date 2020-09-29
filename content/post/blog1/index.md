@@ -1,5 +1,5 @@
 ---
-path: blog1
+path: new8
 title: RxC的价值观
 date: 2020-09-28T02:48:22.844Z
 featuredpost: true
