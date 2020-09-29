@@ -3,8 +3,8 @@ path: new8
 title: RxC的价值观
 date: 2020-09-29T07:56:51.216Z
 featuredpost: true
-img: washington-monument-with-sunset-400x250.jpg
-authorimg: washington-monument-with-sunset-400x250.jpg
+img: wechatimg241.png
+authorimg: wechatimg241.png
 description: "**Avital Balwit谈RxC的价值观**"
 author: Avital Balwit
 ---
