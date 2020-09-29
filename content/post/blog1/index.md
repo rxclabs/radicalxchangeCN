@@ -5,7 +5,7 @@ date: 2020-09-28T02:48:22.844Z
 featuredpost: true
 img: washington-monument-with-sunset-400x250.jpg
 authorimg: washington-monument-with-sunset-400x250.jpg
-description: "**Avital Balwit谈RxC的价值观**"
+description: Avital Balwit谈RxC的价值观
 author: Avital Balwit
 ---
 我从RxC社区诞生之日起就在这里工作，一开始我们还没有这样的社区，有的就是个名字。2018年的秋天我刚结束大一的生活，在《激进市场》的新书推介会上遇到了Glen，我询问他需不需要帮他做点什么，他说他想举办一场研讨会。自那以后，我就加入了RxC。几年过去了，我见证了RxC的成长和进步。今天的这篇文章里我会和大家说说我对于RxC价值观的看法。
