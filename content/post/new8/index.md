@@ -3,8 +3,8 @@ path: new8
 title: RxC的价值观
 date: 2020-09-29T07:56:51.216Z
 featuredpost: true
-img: wechatimg241.png
-authorimg: wechatimg241.png
+img: xx.png
+authorimg: xx.png
 description: "**Avital Balwit谈RxC的价值观**"
 author: Avital Balwit
 ---
