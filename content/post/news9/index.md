@@ -6,6 +6,7 @@ featuredpost: true
 img: 640.png
 authorimg: 640.png
 description: "实践智慧之网 | Panel 1: 基进市场 Radical Market 讲者及讲题介绍"
+tags: news
 author: "iNetworkSociety "
 ---
 <!--StartFragment-->
@@ -16,15 +17,14 @@ author: "iNetworkSociety "
 
 [网络社会年会](https://www.caa-ins.org/archives/category/%E7%BD%91%E7%BB%9C%E7%A4%BE%E4%BC%9A%E5%B9%B4%E4%BC%9A)
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/Jw8hS31CiclsM5HG9shBfhj1PY11mNR51QZKzHuY4lN3Aq3LLB9N9ynMSqvYCZd3ic939TLAsTlUHiaQb7nEW5xeQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](img4.png)
 
 Radical Markets
 
 *<http://radicalmarkets.com/>*
 
 
-
-![img](https://mmbiz.qpic.cn/mmbiz_png/Jw8hS31CiclsM5HG9shBfhj1PY11mNR51icersjVvMGdX9GSrSZOlKbLffjH8OiaDpPvJZ7l0UxV5MwZzDNxHwQhQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](img3.png)
 
 RadicalxChange
 
@@ -37,12 +37,12 @@ RadicalxChange
 🌎
 
 
+<div align='center' ><font size='5'>主题一 <10.20> Panel 1</font></div>
 
-**主题一 <10.20> Panel 1**
+<div align='center' ><font size='5'> 基进市场 RADICAL MARKET</div>
 
-**基进市场 RADICAL MARKET**
+<div align='center' ><font size='5'> 天问特别场 第六场 危机 | 转机</div>
 
-天问特别场 第六场 危机 | 转机
 
 
 
@@ -334,12 +334,13 @@ The Web of Phronesis
 
 
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/Jw8hS31CicltBGZwuDLaWS5peg2JLl2tHWuzUz25PKzohYxO8WTR9lfDmLLiaNFCnIBkT086qLdonhNIg2YF1ePQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+
+![img](img1.png)
 
 **👇 年会论坛一（天问第六场）👇**
 
-![img](https://i0.wp.com/www.caa-ins.org/wp-content/uploads/2020/10/天问报名二维码.png?resize=267%2C267&ssl=1)
-
+![img](img2.png)
 
 
 **ZOOM 线上会议**
