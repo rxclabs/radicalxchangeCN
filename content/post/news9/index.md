@@ -7,7 +7,7 @@ img: 640.png
 authorimg: 640.png
 description: "实践智慧之网 | Panel 1: 基进市场 Radical Market 讲者及讲题介绍"
 tags: news
-author: "iNetworkSociety "
+author: "iNetworkSociety"
 ---
 <!--StartFragment-->
 
