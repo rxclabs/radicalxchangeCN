@@ -23,9 +23,10 @@ const BlogPostTemplate = ({ location, data, pageContext }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.img.childImageSharp.fixed.src}
+        image={post.frontmatter.image}
         pathname={location.href}
       />
+      {console.log(post.frontmatter.image)}
       <Box
         w="100%"
         maxW={800}
@@ -122,6 +123,16 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
+        image: img {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
+
         author
         authorimg {
           childImageSharp {
@@ -130,6 +141,7 @@ export const pageQuery = graphql`
             }
           }
         }
+
         date(formatString: "YYYY-MM-DD")
         description
         img {
