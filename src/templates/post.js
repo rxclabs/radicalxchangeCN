@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import SEO from "../components/seo"
+import SEO from 'react-seo-component'
 import {
   Box,
   Heading,
@@ -17,16 +17,26 @@ import Content from "../components/content"
 const BlogPostTemplate = ({ location, data, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
-
+  const site = data.site.siteMetadata
   return (
     <Layout>
-      <SEO
+
+        <SEO
         title={post.frontmatter.title}
+        titleTemplate={site.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.image}
+        image={location.origin+post.frontmatter.image.childImageSharp.resize.src}
         pathname={location.href}
+        article={true}
+        siteLanguage={site.siteLanguage}
+        siteLocale={site.siteLocale}
+        twitterUsername={site.twitterUsername}
+        author={site.author}
+        publishedDate={post.frontmatter.date}
+        modifiedDate={new Date(Date.now()).toISOString()}
       />
-      {console.log(post.frontmatter.image)}
+      
+
       <Box
         w="100%"
         maxW={800}
@@ -156,6 +166,18 @@ export const pageQuery = graphql`
         title
       }
       html
+    }
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        keywords
+        siteLanguage
+        siteLocale
+        siteUrl
+        twitterUsername
+      }
     }
   }
 `

@@ -4,7 +4,11 @@ module.exports = {
     description: `RadicalxChange，中文为基进变革或激进变革，简称为RxC，是由《激进市场》（Radical Markets）作者Glen Weyl联合其他人包括以太坊创始人Vitalik Buterin发起的社区。RxC致力于通过对自由、竞争和开放市场机制的设计来减少不平等现象，缔造可最大化分享的繁荣，袮补全球化裂痕，探索合作型社会的机制。`,
     author: `@rxc`,
     keywords:`blog, RadicalxChange`,
+    lastBuildDate: new Date(Date.now()).toISOString(),
     siteUrl:`https://radicalxchange.cn/`,
+    twitterUsername: `@RxCCanton`,
+    siteLanguage: `zh-CN`,
+    siteLocale: `zh-cn`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
