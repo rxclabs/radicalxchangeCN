@@ -25,8 +25,8 @@ const BlogPostTemplate = ({ location, data, pageContext }) => {
         title={post.frontmatter.title}
         titleTemplate={site.title}
         description={post.frontmatter.description}
-        image={location.origin+post.frontmatter.image.childImageSharp.resize.src}
-        pathname={location.href}
+        image={'https://radicalxchange.cn'+post.frontmatter.image.childImageSharp.resize.src}
+        pathname={'https://radicalxchange.cn'+location.pathname}
         article={true}
         siteLanguage={site.siteLanguage}
         siteLocale={site.siteLocale}
@@ -36,7 +36,6 @@ const BlogPostTemplate = ({ location, data, pageContext }) => {
         modifiedDate={new Date(Date.now()).toISOString()}
       />
       
-
       <Box
         w="100%"
         maxW={800}
