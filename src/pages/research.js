@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "react-seo-component"
 import EachList from "../components/eachList"
 // ui
 import { Heading, Box, Text, Divider } from "@chakra-ui/core"
@@ -10,7 +10,16 @@ const Research = ({ data }) => {
   return (
     <Layout>
       < Box mb="30vh">
-      <SEO title="研究" />
+      <SEO
+       title={`研究`}
+        titleTemplate={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+        image={'https://radicalxchange.cn'+ data.imageSharp.fixed.src}
+        pathname={data.site.siteMetadata.siteUrl}
+        siteLanguage={data.site.siteMetadata.siteLanguage}
+        siteLocale={data.site.siteMetadata.siteLocale}
+        twitterUsername={data.site.siteMetadata.twitterUsername}
+      />
       <Box
         w="100%"
         maxW={1080}
@@ -72,6 +81,26 @@ export const query = graphql`
         }
       }
     }
+
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        keywords
+        siteLanguage
+        siteLocale
+        siteUrl
+        twitterUsername
+      }
+    }
+
+
+imageSharp(sizes: {originalName: {eq: "gatsby-icon.png"}}) {
+  fixed {
+    src
+  }
+}
   }
 `
 

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "react-seo-component"
 import EachList from "../components/eachList"
 // ui
 import { Heading, Box, Text, Divider } from "@chakra-ui/core"
@@ -9,7 +9,16 @@ import { graphql } from 'gatsby'
 const News = ({ data }) => {
   return (
     <Layout>
-      <SEO title="新闻" />
+    <SEO
+       title={`新闻`}
+        titleTemplate={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+        image={'https://radicalxchange.cn'+ data.imageSharp.fixed.src}
+        pathname={data.site.siteMetadata.siteUrl}
+        siteLanguage={data.site.siteMetadata.siteLanguage}
+        siteLocale={data.site.siteMetadata.siteLocale}
+        twitterUsername={data.site.siteMetadata.twitterUsername}
+      />
       < Box mb="30vh">
       <Box
         w="100%"
@@ -73,6 +82,26 @@ export const query = graphql`
         }
       }
     }
+
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        keywords
+        siteLanguage
+        siteLocale
+        siteUrl
+        twitterUsername
+      }
+    }
+
+
+imageSharp(sizes: {originalName: {eq: "gatsby-icon.png"}}) {
+  fixed {
+    src
+  }
+}
   }
 `
 

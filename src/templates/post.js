@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ location, data, pageContext }) => {
         description={post.frontmatter.description}
         image={'https://radicalxchange.cn'+post.frontmatter.image.childImageSharp.resize.src}
         pathname={'https://radicalxchange.cn'+location.pathname}
-        article={false}
+        article={true}
         siteLanguage={site.siteLanguage}
         siteLocale={site.siteLocale}
         twitterUsername={site.twitterUsername}

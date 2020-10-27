@@ -10,14 +10,26 @@ import {
   useColorMode,
 } from "@chakra-ui/core"
 import { FaTwitter } from "react-icons/fa"
-import SEO from "../components/seo"
+import SEO from "react-seo-component"
 import Concept from "../components/concept"
 
-const About = () => {
+import { graphql } from 'gatsby'
+
+
+const About = ({ data }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Layout>
-      <SEO title="关于" />
+        <SEO
+       title={`关于`}
+        titleTemplate={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+        image={'https://radicalxchange.cn'+ data.imageSharp.fixed.src}
+        pathname={data.site.siteMetadata.siteUrl}
+        siteLanguage={data.site.siteMetadata.siteLanguage}
+        siteLocale={data.site.siteMetadata.siteLocale}
+        twitterUsername={data.site.siteMetadata.twitterUsername}
+      />
       <Concept />
       <Box
         overflow="visible"
@@ -225,5 +237,31 @@ const About = () => {
     </Layout>
   )
 }
+
+
+export const query = graphql`
+  {
+
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        keywords
+        siteLanguage
+        siteLocale
+        siteUrl
+        twitterUsername
+      }
+    }
+
+
+imageSharp(sizes: {originalName: {eq: "gatsby-icon.png"}}) {
+  fixed {
+    src
+  }
+}
+  }
+`
 
 export default About
