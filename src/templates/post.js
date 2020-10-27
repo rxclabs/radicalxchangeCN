@@ -14,20 +14,25 @@ import {
 import Layout from "../components/layout"
 import Content from "../components/content"
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ location, data, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={post.frontmatter.img.childImageSharp.fixed.src}
+        pathname={location.href}
+      />
       <Box
         w="100%"
         maxW={800}
         mx="auto"
         px="30px"
         pt={["20px", "20px", "50px", "10vh"]}
-        mb={["15vh","15vh","20vh","40vh"]}
+        mb={["15vh", "15vh", "20vh", "40vh"]}
       >
         <Heading
           lineHeight="7vh"
@@ -46,7 +51,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         >
           {post.frontmatter.description}
         </Text>
-        <Divider/>
+        <Divider />
 
         <Stack isInline mt="1.5rem" mb="2rem">
           <Avatar
@@ -61,13 +66,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </Stack>
 
         <Content input={post.html} />
-        <Divider/>
+        <Divider />
         <Flex
           justifyContent={["center", "center", "center", "space-between"]}
           mt="10rem"
           flexWrap="wrap"
         >
-          <Box  w={["100%","100%","80%","40%"]} h="100%">
+          <Box w={["100%", "100%", "80%", "40%"]} h="100%">
             {previous && (
               <Link to={previous.fields.slug} rel="nepreviousxt">
                 <Image
@@ -84,7 +89,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </Box>
 
-          <Box   w={["100%","100%","80%","40%"]}  h="100%" mt={["10vh","10vh","10vh","0"]}>
+          <Box
+            w={["100%", "100%", "80%", "40%"]}
+            h="100%"
+            mt={["10vh", "10vh", "10vh", "0"]}
+          >
             {next && (
               <Link to={next.fields.slug} rel="next">
                 <Image
